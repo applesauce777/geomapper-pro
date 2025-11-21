@@ -249,10 +249,4 @@ See LICENSE.md for terms.
 
 ---
 
-## 📧 Support
-
-Questions or issues? Contact: [your-email@example.com]
-
----
-
 **GeoMapper Pro v2.1.0** — Your data, your maps, your machine.
