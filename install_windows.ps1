@@ -36,7 +36,7 @@ Write-Host "  Location: $InstallDir" -ForegroundColor Green
 # Copy files
 Write-Host "[3/7] Copying GeoMapper files..." -ForegroundColor Yellow
 $sourceDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$filesToCopy = @("geomap.py", "geomap_pro.py", "flask_app.py", "requirements.txt")
+$filesToCopy = @("geomap.py", "flask_app.py", "requirements.txt")
 
 foreach ($file in $filesToCopy) {
     $sourcePath = Join-Path $sourceDir $file

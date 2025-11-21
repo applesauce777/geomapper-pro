@@ -41,7 +41,7 @@ echo -e "  ${GREEN}Location: $INSTALL_DIR${NC}"
 echo -e "${YELLOW}[3/7] Copying GeoMapper files...${NC}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-for file in geomap.py geomap_pro.py flask_app.py requirements.txt; do
+for file in geomap.py flask_app.py requirements.txt; do
     if [ -f "$SCRIPT_DIR/$file" ]; then
         cp "$SCRIPT_DIR/$file" "$INSTALL_DIR/"
         echo -e "  ${GREEN}Copied: $file${NC}"
