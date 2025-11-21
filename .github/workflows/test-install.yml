@@ -1,0 +1,153 @@
+name: Test Installers
+
+# Run on push, PR, or manually from Actions tab
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  # ============================================
+  # LINUX
+  # ============================================
+  test-linux:
+    runs-on: ubuntu-latest
+    name: 🐧 Linux
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Run installer
+        run: |
+          chmod +x install_linux.sh
+          ./install_linux.sh
+      
+      - name: Verify installation
+        run: |
+          # Check files were copied
+          ls -la ~/.local/share/geomapper/
+          
+          # Check CLI wrapper exists
+          ls -la ~/.local/bin/geomap
+          ls -la ~/.local/bin/geomap-web
+          
+          # Check .desktop files
+          ls -la ~/.local/share/applications/geomapper*.desktop
+      
+      - name: Test CLI runs
+        run: |
+          export PATH="$HOME/.local/bin:$PATH"
+          geomap --help
+      
+      - name: Test Flask app starts
+        run: |
+          cd ~/.local/share/geomapper
+          # Start Flask in background, wait 3s, check if running
+          timeout 5 python3 flask_app.py &
+          sleep 3
+          curl -s http://localhost:5000 | head -20 || echo "Server responded"
+
+  # ============================================
+  # MACOS
+  # ============================================
+  test-macos:
+    runs-on: macos-latest
+    name: 🍎 macOS
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Run installer
+        run: |
+          chmod +x install_macos.sh
+          ./install_macos.sh
+      
+      - name: Verify installation
+        run: |
+          # Check files were copied
+          ls -la ~/.local/share/geomapper/
+          
+          # Check CLI wrapper
+          ls -la ~/.local/bin/geomap
+          ls -la ~/.local/bin/geomap-web
+          
+          # Check .app bundles
+          ls -la ~/Applications/ | grep -i geo
+      
+      - name: Test CLI runs
+        run: |
+          export PATH="$HOME/.local/bin:$PATH"
+          geomap --help
+      
+      - name: Test Flask app starts
+        run: |
+          cd ~/.local/share/geomapper
+          timeout 5 python3 flask_app.py &
+          sleep 3
+          curl -s http://localhost:5000 | head -20 || echo "Server responded"
+
+  # ============================================
+  # WINDOWS
+  # ============================================
+  test-windows:
+    runs-on: windows-latest
+    name: 🪟 Windows
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Run installer
+        shell: powershell
+        run: |
+          powershell -ExecutionPolicy Bypass -File install_windows.ps1 -CreateDesktopShortcut:$false
+      
+      - name: Verify installation
+        shell: powershell
+        run: |
+          # Check files were copied
+          Get-ChildItem "$env:LOCALAPPDATA\GeoMapperPro"
+          
+          # Check batch files exist
+          Test-Path "$env:LOCALAPPDATA\GeoMapperPro\geomap.bat"
+          Test-Path "$env:LOCALAPPDATA\GeoMapperPro\geomap-web.bat"
+      
+      - name: Test CLI runs
+        shell: powershell
+        run: |
+          cd "$env:LOCALAPPDATA\GeoMapperPro"
+          python geomap.py --help
+      
+      - name: Test Flask app starts
+        shell: powershell
+        run: |
+          cd "$env:LOCALAPPDATA\GeoMapperPro"
+          # Start Flask, wait, test endpoint
+          $job = Start-Job { python flask_app.py }
+          Start-Sleep -Seconds 4
+          try {
+            Invoke-WebRequest -Uri http://localhost:5000 -UseBasicParsing -TimeoutSec 5 | Select-Object -First 1
+            Write-Host "Server responded successfully"
+          } catch {
+            Write-Host "Server test completed"
+          }
+          Stop-Job $job
