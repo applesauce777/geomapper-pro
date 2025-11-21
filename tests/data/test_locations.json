@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Central Park",
+    "latitude": 40.7829,
+    "longitude": -73.9654,
+    "type": "park",
+    "city": "New York",
+    "rating": 4.8
+  },
+  {
+    "name": "Golden Gate Bridge",
+    "latitude": 37.8199,
+    "longitude": -122.4783,
+    "type": "landmark",
+    "city": "San Francisco",
+    "rating": 4.9
+  },
+  {
+    "name": "Navy Pier",
+    "latitude": 41.8919,
+    "longitude": -87.6051,
+    "type": "attraction",
+    "city": "Chicago",
+    "rating": 4.5
+  },
+  {
+    "name": "Space Needle",
+    "latitude": 47.6205,
+    "longitude": -122.3493,
+    "type": "landmark",
+    "city": "Seattle",
+    "rating": 4.6
+  },
+  {
+    "name": "Venice Beach",
+    "latitude": 33.985,
+    "longitude": -118.4695,
+    "type": "beach",
+    "city": "Los Angeles",
+    "rating": 4.4
+  },
+  {
+    "name": "Millennium Park",
+    "latitude": 41.8826,
+    "longitude": -87.6226,
+    "type": "park",
+    "city": "Chicago",
+    "rating": 4.7
+  },
+  {
+    "name": "Pike Place Market",
+    "latitude": 47.6097,
+    "longitude": -122.3425,
+    "type": "market",
+    "city": "Seattle",
+    "rating": 4.5
+  },
+  {
+    "name": "Alcatraz Island",
+    "latitude": 37.8267,
+    "longitude": -122.4233,
+    "type": "historic",
+    "city": "San Francisco",
+    "rating": 4.7
+  }
+]

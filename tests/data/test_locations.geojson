@@ -1,0 +1,133 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9654,
+          40.7829
+        ]
+      },
+      "properties": {
+        "name": "Central Park",
+        "type": "park",
+        "city": "New York",
+        "rating": 4.8
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4783,
+          37.8199
+        ]
+      },
+      "properties": {
+        "name": "Golden Gate Bridge",
+        "type": "landmark",
+        "city": "San Francisco",
+        "rating": 4.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6051,
+          41.8919
+        ]
+      },
+      "properties": {
+        "name": "Navy Pier",
+        "type": "attraction",
+        "city": "Chicago",
+        "rating": 4.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3493,
+          47.6205
+        ]
+      },
+      "properties": {
+        "name": "Space Needle",
+        "type": "landmark",
+        "city": "Seattle",
+        "rating": 4.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.4695,
+          33.985
+        ]
+      },
+      "properties": {
+        "name": "Venice Beach",
+        "type": "beach",
+        "city": "Los Angeles",
+        "rating": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.6226,
+          41.8826
+        ]
+      },
+      "properties": {
+        "name": "Millennium Park",
+        "type": "park",
+        "city": "Chicago",
+        "rating": 4.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.3425,
+          47.6097
+        ]
+      },
+      "properties": {
+        "name": "Pike Place Market",
+        "type": "market",
+        "city": "Seattle",
+        "rating": 4.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.4233,
+          37.8267
+        ]
+      },
+      "properties": {
+        "name": "Alcatraz Island",
+        "type": "historic",
+        "city": "San Francisco",
+        "rating": 4.7
+      }
+    }
+  ]
+}

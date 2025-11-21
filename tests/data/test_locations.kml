@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Test Locations</name>
+    <description>GeoMapper test data in KML format</description>
+    <Placemark>
+      <name>Central Park</name>
+      <description>Park in New York</description>
+      <Point>
+        <coordinates>-73.9654,40.7829,40</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Golden Gate Bridge</name>
+      <description>Landmark in San Francisco</description>
+      <Point>
+        <coordinates>-122.4783,37.8199,67</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Navy Pier</name>
+      <description>Attraction in Chicago</description>
+      <Point>
+        <coordinates>-87.6051,41.8919,176</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Space Needle</name>
+      <description>Landmark in Seattle</description>
+      <Point>
+        <coordinates>-122.3493,47.6205,158</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Venice Beach</name>
+      <description>Beach in Los Angeles</description>
+      <Point>
+        <coordinates>-118.4695,33.985,5</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Millennium Park</name>
+      <description>Park in Chicago</description>
+      <Point>
+        <coordinates>-87.6226,41.8826,182</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pike Place Market</name>
+      <description>Market in Seattle</description>
+      <Point>
+        <coordinates>-122.3425,47.6097,20</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Alcatraz Island</name>
+      <description>Historic site in San Francisco</description>
+      <Point>
+        <coordinates>-122.4233,37.8267,40</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
