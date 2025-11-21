@@ -8,6 +8,7 @@ Usage:
     Then open: http://localhost:5000
 """
 
+__version__ = "2.1.0"
 import os
 import sys
 import json

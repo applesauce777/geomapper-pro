@@ -128,7 +128,7 @@ if ($CreateDesktopShortcut -or (-not $PSBoundParameters.ContainsKey('CreateDeskt
     $shortcutPath = Join-Path $desktopPath "GeoMapper Pro.lnk"
     Create-Shortcut -ShortcutPath $shortcutPath `
                     -TargetPath "cmd.exe" `
-                    -Arguments "/k cd /d `"$InstallDir`" && echo GeoMapper Pro Ready. Type: python geomap.py --help" `
+                    -Arguments "/k cd /d `"$InstallDir`" && echo GeoMapper Pro v2.1.0 Ready. Type: python geomap.py --help" `
                     -IconPath $iconDest `
                     -WorkingDir $InstallDir `
                     -Description "GeoMapper Pro CLI"
@@ -157,7 +157,7 @@ if ($CreateStartMenuShortcut) {
     $shortcutPath = Join-Path $programsPath "GeoMapper Pro.lnk"
     Create-Shortcut -ShortcutPath $shortcutPath `
                     -TargetPath "cmd.exe" `
-                    -Arguments "/k cd /d `"$InstallDir`" && echo GeoMapper Pro Ready." `
+                    -Arguments "/k cd /d `"$InstallDir`" && echo GeoMapper Pro v2.1.0 Ready." `
                     -IconPath $iconDest `
                     -WorkingDir $InstallDir `
                     -Description "GeoMapper Pro CLI"
