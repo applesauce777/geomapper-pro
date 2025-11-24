@@ -68,6 +68,22 @@ Then run `geomap-web` or find **"GeoMapper Pro (Web UI)"** in your applications 
 
 ---
 
+## 📸 Example Screenshots
+
+### Location Dataset (CSV → Interactive Map)
+![CSV Example](screenshots/example.png)
+
+The CSV upload workflow automatically detects latitude/longitude columns and renders an interactive map with popups, clusters, or heatmaps.
+
+---
+
+### GPX Route Visualization (Terrain Basemap)
+![GPX Route](screenshots/tracks.png)
+
+GeoMapper Pro supports GPX route files with optional line connections, smoothing, clustering, and alternate basemaps such as Terrain, Dark Matter, and more.
+
+---
+
 ## 🤔 Why GeoMapper Pro?
 
 | Feature | GeoMapper Pro | Google My Maps | GPS Visualizer | Kepler.gl |
