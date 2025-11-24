@@ -1,8 +1,8 @@
 # 🗺️ GeoMapper Pro
 
-> **Transform your geographic data into beautiful interactive maps in seconds.**
+> **Transform your geographic data into interactive maps in seconds.**
 
-A powerful desktop tool that converts tabular data with coordinates into stunning interactive web maps. Runs completely offline — your data never leaves your machine.
+A simple desktop tool that converts tabular data with coordinates into interactive web maps. Runs completely offline — your data never leaves your machine.
 
 [![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/applesauce777/geomapper-pro/releases)
 [![Python](https://img.shields.io/badge/python-3.7+-green.svg)](https://www.python.org/downloads/)
@@ -360,8 +360,6 @@ MIT License - see [LICENSE.md](LICENSE.md) for details.
 If GeoMapper Pro saved you time or helped with your work, consider buying me a coffee!
 
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20This%20Project-ff5e5b?logo=ko-fi&style=for-the-badge)](https://ko-fi.com/applesauce777)
-
-Your support helps keep this project maintained and free for everyone.
 
 ---
 
