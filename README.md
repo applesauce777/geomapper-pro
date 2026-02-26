@@ -2,7 +2,7 @@
 
 > **Transform your geographic data into interactive maps in seconds.**
 
-A simple desktop tool that converts tabular data with coordinates into interactive web maps. Runs completely offline — your data never leaves your machine.
+A simple desktop tool that converts tabular data with coordinates into interactive web maps. Runs completely offline, your data never leaves your machine.
 
 [![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/applesauce777/geomapper-pro/releases)
 [![Python](https://img.shields.io/badge/python-3.7+-green.svg)](https://www.python.org/downloads/)
